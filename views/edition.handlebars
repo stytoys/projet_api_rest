@@ -1,0 +1,27 @@
+<section style="background-color: #E9ECEF;">
+    <div class="container" style="padding: 40px;">
+        <form method="POST" action="/" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Titre de l'article :</label>
+                <input type="text" class="form-control" name="title">
+            </div>
+
+            <div class="form-group">
+                <label>Contenu de l'article :</label>
+                <textarea type="text" class="form-control" name="content"></textarea>
+            </div>
+
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" name="cover">
+                <label class="custom-file-label" for="customFile">Selectionnez une image</label>
+            </div>
+
+            <div class="form-group" style="margin-top: 1rem;">
+                <button type="submit" class="btn btn-success btn-sm">Enregistrer</button>
+                <button type="button" class="btn btn-danger btn-sm">
+                    <a href="/" style="text-decoration: none; color: #fff">Annuler</a>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>

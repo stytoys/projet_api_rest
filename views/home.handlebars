@@ -1,0 +1,34 @@
+<!-- jumbotron -->
+<div class="jumbotron text-center" style="background-color: #E9ECEF;">
+    <h1>Application des _method GET, POST, PUT et DELETE</h1>
+    <p>Test avec un modèle BS4 Jumbotron, BS4 navbar et BS4 button</p>
+    <button type="button" class="btn btn-success btn-sm btn-block" style="margin-bottom: 20px;">
+       <a href="/edition" style="text-decoration: none; color: #fff">Ajouter un post</a>
+    </button>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- article -->
+        {{#each article}}
+        <div class="col-md-4 " style="margin: 20px auto;">
+            <div class="card mb-4 shadow-sm">
+                <img src="{{this.cover.urlSharp}}" alt="" class="bd-placeholder-img card-img-top" preserveAspectRatio="xMidYMid slice" >
+
+                <div class="card-body">
+                    <h3 class="card-text">{{this.title}}</h3>
+                    <p class="card-text">{{this.content}}</p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-secondary btn-sm">
+                                <a href="/update/{{this.id}}" style="text-decoration: none; color:inherit">Modifier</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
